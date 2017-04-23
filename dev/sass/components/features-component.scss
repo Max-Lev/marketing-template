@@ -1,0 +1,18 @@
+@import './../mixin/mixin';
+#features-container {
+    display: flex;
+    // min-height: 685px;
+    @include heighCalc(685);
+    border:1px solid lightsalmon;
+    .title {
+        border: 1px solid aqua; // padding-top:5%;
+        display: flex;
+        flex: 1; // height: 5%; 
+        min-width: 224px;
+    }
+    .features {
+        min-height: 351px;
+        border: 1px solid blue;
+        display: flex;
+    }
+}

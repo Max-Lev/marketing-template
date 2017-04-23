@@ -1,0 +1,93 @@
+body,
+html {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  height: 100%; }
+
+body {
+  width: 100%;
+  max-width: 1440px;
+  height: 4963px;
+  margin: 0;
+  padding: 0;
+  align-self: center; }
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  align-items: stretch; }
+
+#header-container {
+  height: 16.36107%;
+  min-height: 812px;
+  background-image: url("./../../assets/header-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex: 1; }
+
+#design-container {
+  height: 14.54765%;
+  min-height: 722px;
+  display: flex;
+  flex-direction: row;
+  flex: 1; }
+
+#design-container .article-container {
+  width: 60.34722%;
+  padding: 9% 9.5% 9% 9.5%;
+  box-sizing: border-box;
+  display: block; }
+  #design-container .article-container article {
+    border: 1px solid aqua;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative; }
+
+#design-container #img {
+  width: 39.65278%;
+  border: 1px solid aqua;
+  display: flex;
+  position: relative; }
+  #design-container #img .triangle-down-right {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0; }
+  #design-container #img .triangle-down-right:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: -1440px;
+    border-top: 1440px solid transparent;
+    border-right: 1440px solid #eb7875; }
+
+#design-container article h2 {
+  font-weight: 300;
+  font-size: 3rem;
+  margin: 0; }
+
+#features-container {
+  display: flex;
+  height: 13.80214%;
+  min-height: 685px;
+  border: 1px solid lightsalmon; }
+  #features-container .title {
+    border: 1px solid aqua;
+    display: flex;
+    flex: 1;
+    min-width: 224px; }
+  #features-container .features {
+    min-height: 351px;
+    border: 1px solid blue;
+    display: flex; }

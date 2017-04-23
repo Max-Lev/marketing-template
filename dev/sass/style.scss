@@ -1,4 +1,31 @@
-body,html {
-    border: 1px solid lime;
- 
-} 
+body,
+html {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    max-width: 1440px;
+    height: 4963px;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    align-items: stretch;
+}
+
+@import './mixin/mixin';
+@import './components/header-component';
+@import './components/design-component';
+@import './components/features-component';

@@ -1,0 +1,11 @@
+@import './../mixin/mixin';
+#header-container {
+    // height: 812px;
+    @include heighCalc(812);
+    @include background-center('./../../assets/header-bg.jpg');
+    
+    background-size: cover;
+    display: flex;
+    
+    flex: 1;
+}
