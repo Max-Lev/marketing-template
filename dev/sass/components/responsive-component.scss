@@ -1,0 +1,48 @@
+@import './../mixin/mixin';
+#responsive-container {
+    @include heighCalc(635);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    .bottom {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        .left,
+        .right {
+            display: flex;
+            flex: 1;
+        }
+        .left {
+            position: relative;
+            overflow: hidden;
+            background-size: contain;
+            @include background-center('../../assets/mac.png');
+            .triangle-left-top {
+                @include background-center('../../assets/triangle.png');
+                display: flex;
+                flex: 1;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                background-size: initial;
+                z-index: -1;
+                transform: scaleX(-1);
+                background-position: 100% 15%;
+                left: 0;
+                position: absolute;
+                margin: 0 auto;
+                background-position: 0 14%;
+                left: -16%;
+            }
+        }
+        .right {
+            align-items: center;
+            .article {
+                height: 50%;
+                padding: 0 3.5%;
+                box-sizing: border-box;
+            }
+        }
+    }
+}

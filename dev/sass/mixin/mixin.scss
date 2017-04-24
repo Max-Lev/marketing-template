@@ -6,9 +6,10 @@
 
 @mixin heighCalc($height) {
     height: ($height/4963 * 100%);
+    height: ($height/3206 * 100%);
     min-height: $height + px;
 }
 
-@mixin widthCalc($width){
+@mixin widthCalc($width) {
     width: ($width/1440 * 100%);
 }

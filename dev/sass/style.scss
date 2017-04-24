@@ -12,20 +12,23 @@ body {
     width: 100%;
     max-width: 1440px;
     height: 4963px;
+    height: 3206px;
     margin: 0;
     padding: 0;
     align-self: center;
 }
 
 #main-container {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    width: 100%;
     height: 100%;
-    flex: 1;
-    align-items: stretch;
 }
 
 @import './mixin/mixin';
+@import './components/submit-btn';
 @import './components/header-component';
 @import './components/design-component';
 @import './components/features-component';
+@import './components/responsive-component';
+@import './components/registration-component';
+@import './components/article-component';

@@ -1,18 +1,97 @@
 @import './../mixin/mixin';
+@import './../variables/variables';
 #features-container {
     display: flex;
-    // min-height: 685px;
-    @include heighCalc(685);
-    border:1px solid lightsalmon;
-    .title {
-        border: 1px solid aqua; // padding-top:5%;
+    @include heighCalc(574);
+    background-color: $features-background;
+    flex-direction: column;
+    .title-container {
         display: flex;
-        flex: 1; // height: 5%; 
+        flex: 1;
         min-width: 224px;
+        @include heighCalc(224);
+        flex-direction: row;
+        background-color: #fff;
     }
-    .features {
+    .icons-container {
         min-height: 351px;
-        border: 1px solid blue;
+        @include heighCalc(351);
         display: flex;
+        flex-direction: row;
+    }
+}
+
+#features-container {
+    .title-container {
+        .left,
+        .center,
+        .right {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+        .left {
+            @include background-center('./../../assets/pencils.png');
+            background-position: center top;
+        }
+        .center {
+            flex: 2;
+            text-align: center;
+            justify-content: flex-end;
+            h2,
+            h3 {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            h2 {
+                font-weight: 400;
+                font-size: 3em;
+                margin-top: 0;
+            }
+            h3 {
+                color: #eb7875;
+                text-transform: uppercase;
+                font-size: 1.5em;
+                font-weight: normal;
+                margin: 0;
+                line-height: 2;
+            }
+        }
+        .right {
+            @include background-center('./../../assets/earphones.png');
+            background-position: center top;
+        }
+    }
+}
+
+#features-container {
+    .icons-container {
+        .left,
+        .center,
+        .right {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: flex-end;
+            text-align: center;
+            padding: 3%;
+            box-sizing: border-box;
+            article {
+                color: #222222;
+                height: 50%;
+            }
+        }
+        .left {
+            @include background-center('../../assets/images.png');
+            background-position: center 35%;
+        }
+        .center {
+            @include background-center('../../assets/airplane.png');
+            background-position: center 35%;
+        }
+        .right {
+            @include background-center('../../assets/bulb.png');
+            background-position: center 35%;
+        }
     }
 }

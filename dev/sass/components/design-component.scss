@@ -1,10 +1,10 @@
 @import './../mixin/mixin';
 #design-container {
-    // min-height: 722px;
     @include heighCalc(722);
     display: flex;
     flex-direction: row;
     flex: 1;
+    position: relative;
 }
 
 #design-container {
@@ -14,7 +14,6 @@
         box-sizing: border-box;
         display: block;
         article {
-            border: 1px solid aqua;
             display: block;
             width: 100%;
             height: 100%;
@@ -24,37 +23,20 @@
 }
 
 #design-container {
-    #img {
-        @include widthCalc(1440-869);
-        border: 1px solid aqua;
+    #img-container {
         display: flex;
+        flex: 1;
         position: relative;
         .triangle-down-right {
-            width: 100%;
-            height: 0;
-            padding-top: 100%;
-            overflow: hidden;
+            @include background-center('../../assets/triangle.png');
             position: absolute;
             bottom: 0;
-        }
-        .triangle-down-right:after {
-            content: "";
-            display: block;
-            width: 0;
-            height: 0;
-            margin-top: -1440px;
-            border-top: 1440px solid transparent;
-            border-right: 1440px solid rgb(235, 120, 117);
-        }
-    }
-}
-
-#design-container {
-    article {
-        h2 {
-            font-weight: 300;
-            font-size: 3rem;
-            margin: 0;
+            width: 100%;
+            height: 87%;
+            margin: 0 auto;
+            background-size: initial;
+            z-index: -1;
+            background-position: 0% 16%;
         }
     }
 }

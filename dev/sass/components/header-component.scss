@@ -1,11 +1,56 @@
 @import './../mixin/mixin';
 #header-container {
-    // height: 812px;
     @include heighCalc(812);
     @include background-center('./../../assets/header-bg.jpg');
-    
     background-size: cover;
     display: flex;
-    
     flex: 1;
+    align-items: center;
+    .title-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        height: 50%;
+        justify-content: flex-start;
+        align-items: center;
+        article {
+            text-align: center;
+        }
+    }
+    .play-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 30%;
+        button.button-fab {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: rgb(109, 113, 148);
+            outline: none;
+            border: 1px solid #6d7194;
+            span {
+                width: 0;
+                height: 0;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-left: 20px solid #fff;
+                display: block;
+                position: relative;
+                margin: 0 auto;
+            }
+        }
+    }
+    .submit-container {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        input[type="submit"] {
+            @include widthCalc(200);
+        }
+    }
 }
