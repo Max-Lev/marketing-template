@@ -24,17 +24,17 @@
 #features-container {
     .title-container {
         .left,
-        .center,
+        .center-cls,
         .right {
             display: flex;
             flex: 1;
             flex-direction: column;
         }
         .left {
-            @include background-center('./../../assets/pencils.png');
+            @include background-center('../assets/pencils.png');
             background-position: center top;
         }
-        .center {
+        .center-cls {
             flex: 2;
             text-align: center;
             justify-content: flex-end;
@@ -49,7 +49,7 @@
                 margin-top: 0;
             }
             h3 {
-                color: #eb7875;
+                color: $submit-color;
                 text-transform: uppercase;
                 font-size: 1.5em;
                 font-weight: normal;
@@ -58,7 +58,7 @@
             }
         }
         .right {
-            @include background-center('./../../assets/earphones.png');
+            @include background-center('../assets/earphones.png');
             background-position: center top;
         }
     }
@@ -67,7 +67,7 @@
 #features-container {
     .icons-container {
         .left,
-        .center,
+        .center-cls,
         .right {
             display: flex;
             flex-direction: column;
@@ -82,16 +82,58 @@
             }
         }
         .left {
-            @include background-center('../../assets/images.png');
+            @include background-center('../assets/images.png');
             background-position: center 35%;
         }
-        .center {
-            @include background-center('../../assets/airplane.png');
+        .center-cls {
+            @include background-center('../assets/airplane.png');
             background-position: center 35%;
         }
         .right {
-            @include background-center('../../assets/bulb.png');
+            @include background-center('../assets/bulb.png');
             background-position: center 35%;
+        }
+    }
+}
+
+@media screen and ($tablet-max) {
+    #features-container {
+        @include resetHeight();
+        .title-container {
+            @include resetHeight();
+            padding: 3%;
+            .center-cls {
+                justify-content: center;
+                padding: 2% 0;
+                h2 {
+                    font-size: 1.5em;
+                    line-height: 2;
+                }
+                h3 {
+                    font-size: 1em;
+                    line-height: 2;
+                }
+            }
+            .left,
+            .right {
+                background-size: 45%;
+                background-position: center;
+            }
+        }
+    }
+    #features-container {
+        .icons-container {
+            @include resetHeight();
+            flex-direction: column;
+            .left,
+            .center-cls,
+            .right {
+                background-position: center 5%;
+                article {
+                    padding-bottom: 5%;
+                    margin-top: 15%
+                }
+            }
         }
     }
 }

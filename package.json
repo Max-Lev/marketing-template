@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "lite-server",
+    "lite-server": "lite-server",
     "dev-server": "gulp run"
   },
   "repository": {
@@ -21,7 +21,11 @@
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-image": "^2.8.0",
     "gulp-include": "^2.3.1",
+    "gulp-postcss": "^6.4.0",
     "gulp-sass": "^3.1.0",
     "lite-server": "^2.3.0"
   }

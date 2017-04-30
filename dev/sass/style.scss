@@ -1,34 +1,45 @@
-body,
-html {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    height: 100%;
-}
+    body,
+    html {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        height: 100%;
+    }
 
-body {
-    width: 100%;
-    max-width: 1440px;
-    height: 4963px;
-    height: 3206px;
-    margin: 0;
-    padding: 0;
-    align-self: center;
-}
+    body {
+        width: 100%;
+        max-width: 1440px;
+        height: 4963px;
+        height: 3206px;
+        margin: 0;
+        padding: 0;
+        align-self: center;
+    }
 
-#main-container {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
+    body * {
+        transition: all .5s ease;
+    }
 
-@import './mixin/mixin';
-@import './components/submit-btn';
-@import './components/header-component';
-@import './components/design-component';
-@import './components/features-component';
-@import './components/responsive-component';
-@import './components/registration-component';
-@import './components/article-component';
+    #main-container {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobile-title {
+        @media(max-width: 768px) {
+            font-size: 2em !important;
+        }
+    }
+
+    @import './mixin/mixin';
+    @import './components/submit-btn';
+    @import './components/header-component';
+    @import './components/design-component';
+    @import './components/features-component';
+    @import './components/responsive-component';
+    @import './components/registration-component';
+    @import './components/article-component';
+    @import './components/input-text';

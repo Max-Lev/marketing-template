@@ -1,0 +1,23 @@
+@import './../variables/variables';
+@import './../mixin/mixin';
+form {
+    display: flex; // flex: 2;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    input {
+        min-height: 50px;
+        display: block;
+        width: 100%;
+        margin-right: 5%;
+        background-color: $form-input-background-color;
+        color: #fff;
+        border: 1px solid #fff;
+        @include borderRadius(3px);
+        font-size: 1em;
+        padding-left: 15px;
+        box-sizing: border-box;
+    }
+    @include placeHolderColor();
+}

@@ -1,4 +1,5 @@
 @import './../mixin/mixin';
+@import './../variables/variables';
 #design-container {
     @include heighCalc(722);
     display: flex;
@@ -28,7 +29,7 @@
         flex: 1;
         position: relative;
         .triangle-down-right {
-            @include background-center('../../assets/triangle.png');
+            @include background-center('../assets/triangle.png');
             position: absolute;
             bottom: 0;
             width: 100%;
@@ -37,6 +38,20 @@
             background-size: initial;
             z-index: -1;
             background-position: 0% 16%;
+        }
+    }
+}
+
+@media screen and ($tablet-max) {
+    #design-container {
+        flex-direction: column;
+        @include resetHeight();
+        .article-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding: 3%;
+            box-sizing: border-box; 
         }
     }
 }

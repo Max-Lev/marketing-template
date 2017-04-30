@@ -1,4 +1,5 @@
 @import './../mixin/mixin';
+@import './../variables/variables';
 #responsive-container {
     @include heighCalc(635);
     display: flex;
@@ -17,9 +18,9 @@
             position: relative;
             overflow: hidden;
             background-size: contain;
-            @include background-center('../../assets/mac.png');
+            @include background-center('../assets/mac.png');
             .triangle-left-top {
-                @include background-center('../../assets/triangle.png');
+                @include background-center('../assets/triangle.png');
                 display: flex;
                 flex: 1;
                 bottom: 0;
@@ -42,6 +43,24 @@
                 height: 50%;
                 padding: 0 3.5%;
                 box-sizing: border-box;
+            }
+        }
+    }
+}
+
+@media screen and ($tablet-max) {
+    #responsive-container {
+        @include resetHeight();
+        .bottom {
+            flex-direction: column;
+            .left {
+                padding: 10%;
+                box-sizing: border-box;
+                margin-top: 3%;
+                .triangle-left-top {
+                    background-position: 100% 15%;
+                    left:0;
+                }
             }
         }
     }

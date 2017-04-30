@@ -1,7 +1,8 @@
 @import './../mixin/mixin';
+@import './../variables/variables';
 #header-container {
     @include heighCalc(812);
-    @include background-center('./../../assets/header-bg.jpg');
+    @include background-center('../assets/header-bg.jpg');
     background-size: cover;
     display: flex;
     flex: 1;
@@ -26,9 +27,9 @@
             width: 65px;
             height: 65px;
             border-radius: 50%;
-            background-color: rgb(109, 113, 148);
+            background-color: $play-btn-color;
             outline: none;
-            border: 1px solid #6d7194;
+            border: 1px solid $play-btn-color;
             span {
                 width: 0;
                 height: 0;
@@ -44,13 +45,42 @@
     .submit-container {
         display: flex;
         flex: 1;
-        justify-content: center;
         height: 100%;
         width: 100%;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         input[type="submit"] {
             @include widthCalc(200);
+        }
+        p {
+            font-weight: 100;
+            font-size: .85em;
+            color: #d2d2d2;
+        }
+    }
+}
+
+@media screen and($tablet-max) {
+    #header-container {
+        padding: 5% 0;
+        @include resetHeight();
+        .submit-container {
+            input[type="submit"] {
+                width: 50%;
+                font-size: 1.5em;
+                letter-spacing: 1px;
+                font-weight: 200;
+            }
+        }
+        .article.article {
+            width: 100%;
+            h2 {
+                font-size: 2.35em;
+            }
+        }
+        .play-container {
+            margin: 2% 0;
         }
     }
 }

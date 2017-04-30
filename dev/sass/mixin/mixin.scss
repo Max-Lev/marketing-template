@@ -13,3 +13,34 @@
 @mixin widthCalc($width) {
     width: ($width/1440 * 100%);
 }
+
+@mixin borderRadius($raduis) {
+    -webkit-border-radius: $raduis;
+    -moz-border-radius: $raduis;
+    -ms-border-radius: $raduis;
+    border-radius: $raduis;
+}
+
+@mixin resetHeight(){
+    min-height: auto;
+    height:auto;
+}
+
+@mixin placeHolderColor() {
+     ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #fff;
+    }
+     ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #fff;
+    }
+     :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #fff;
+    }
+     :-moz-placeholder {
+        /* Firefox 18- */
+        color: #fff;
+    }
+} 

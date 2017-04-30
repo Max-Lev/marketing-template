@@ -1,5 +1,7 @@
 {
   "port": 8000,
-  "files": ["./dev/**/*.{scss}","index.html"],
-  "server": { "baseDir": "./" }
+  "files": ["index.html"],
+  "server": {
+    "baseDir": "./app"
+  }
 }

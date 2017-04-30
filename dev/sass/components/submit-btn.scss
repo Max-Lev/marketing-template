@@ -9,3 +9,15 @@ input[type="submit"] {
     border: 1px solid #fff;
     border-radius: 3px;
 }
+
+#header-container {
+    input[type="submit"] {
+        border: 1px solid $submit-color;
+        font-size: 1.5em;
+        font-weight: 100;
+    }
+}
+
+.end {
+    color: $submit-color;
+}

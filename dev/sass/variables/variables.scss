@@ -1,2 +1,20 @@
-$features-background:rgb(244,242,240);
+$features-background:rgb(244, 242, 240);
 $submit-color:#eb7875;
+$form-background-color: rgb(38, 42, 88);
+$form-input-background-color: rgb(53, 57, 103);
+$tablet-min:'min-width:768px';
+$tablet-max:'max-width:1024px';
+$play-btn-color: #6d7194;
+.tablet-none {
+    @media screen and ($tablet-min) and ($tablet-max) {
+        display: none !important;
+    }
+}
+
+$mobile-min:'min-width:320px';
+$mobile-max:'max-width:1024px';
+.mobile-none {
+    @media screen and ($mobile-max) {
+        display: none !important;
+    }
+}
